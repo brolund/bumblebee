@@ -1,9 +1,6 @@
 BUMBLEBEE_VERSION = '1.1.1'
 
 MUSE_PARSER = [
-    'oqube.muse:muse-parser:jar:1.0-rc3',
-    'fr.lifl:parsing:jar:1.0.1',
-    'jhighlight:jhighlight:jar:1.0', 
     'commons-collections:commons-collections:jar:3.1',
     'commons-logging:commons-logging:jar:1.0.4']
 BATIK = [
@@ -53,7 +50,10 @@ SELENIUM_1_0 = [
 SELENIUM = SELENIUM_1_0
 JETTY = ['jetty:jetty:jar:5.01.1']
 UMLSPEED_NAME='umlspeed:umlspeed:jar:0.19'
-
+MUSE_NAME='oqube.muse:muse-parser:jar:1.0-rc3'
+LIFL_NAME='fr.lifl:parsing:jar:1.0.1'
+JHIGHLIGHT_NAME='jhighlight:jhighlight:jar:1.0'
+    
 BUMBLEBEE = ['com.agical.bumblebee:bumblebee:jar:' + BUMBLEBEE_VERSION]
 BUMBLEBEE_JUNIT4 = ['com.agical.bumblebee:bumblebee_junit4:jar:' + BUMBLEBEE_VERSION]
 BUMBLEBEE_JRUBY = ['com.agical.bumblebee:bumblebee_jruby:jar:' + BUMBLEBEE_VERSION]
