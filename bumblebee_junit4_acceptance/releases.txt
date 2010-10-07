@@ -1,0 +1,176 @@
+*** Release 1.1.1 - Selenium 1.0-beta-2 in examples - 2009-05-21
+    - Test errors are reported before errors in comments 
+    - Selenium 1.0-beta-2 in examples
+    
+*** Release 1.1.0 - GUI documentation utilities - 2009-05-07
+Bumped the minor a notch due to several large new features and a new jar structure.
+    - Added support for documenting web applications with Selenium
+    - Added support for documenting Swing/AWT applications
+    - Moved Storage to com.agical.bumblebee (original class deprecated)
+    - Added simple way of linking to source file
+    - Renamed bumblebee-all-...jar to bumblebee-core-...jar. bumblebee-all-x.y.z.zip still contains all jars needed.
+    - Moved UML related jars (Batik and Umlspeed) out of bumblebee-core (formely bumblebee-all) to avoid it growing more.
+
+*** Release 1.0.6 - UML generation - 2009-04-10
+    - Added functionality for adding UML class diagrams for the current test method and for a bunch of classes.
+    - Bumblebee now uses JUnit 4.5 as default JUnit version. It will be backwards compatible with JUnit 4.4.
+    - JUnit @Ignore methods are not presented in output any more
+    - Added @Exclude annotation for methods that should be run but not be in the documentation
+    - Removed the deprecated =SensibleRubyCollector=. Use the =RubyCollector= without constructor arguments instead.
+    - Removed ability to use HTML directly in the comments using the =RubyHtmlCollector=
+    - Managed to make buildr compress the jars
+
+*** Release 1.0.5 - Changed QDox to PMD for parsing files - 2009-03-07
+    - Added support for including variables
+
+*** Release 1.0.4 - New version of QDox - 2009-02-01
+    - Fixes problems when snippeting files with inner classes.
+    - Improved JUnit4.5 compatibility
+
+*** Release 1.0.3 - Bugfix: HTML-tags in autosnippeted code - 2008-12-19
+    - Bug when using e.g. generics in autosnippeted code.
+    
+*** Release 1.0.2 - Autosnippeting promotion - 2008-11-30
+    - *Autosnippeting* is now the default implementation of including snippets from the test method. This might mean you have to update your usages of e.g. =meth.from.m1.to.m2= and such.
+    - *Method annotations* are included in the output of the =meth= command
+    
+*** Release 1.0.1 - Autosnippeting - 2008-08-20
+    - The experimental feature *Autosnippeting* is implemented. This means that any code between Bumblebee comments is added right there in the comments as snippets.
+
+From now on I'll use a maintenance/build version number for the micro-releases, and I'll push the other two up 
+when there is a good reason for it.  
+
+*** Release 1.0 - Simplified suite configuration - 2008-07-17
+    - Bumblebee now automatically configures sub-suites based on only the =SuiteClasses= annotation.
+    - Further improved stylesheet handling to enable extension (through inclusion) of the default Bumblebee stylesheet
+
+Please, note that release 1.0 is merely the successor to 0.9, it does not imply anything special above the fact that 
+all releases are aimed at full functioning and stability.
+    
+*** Release 0.9 - Improved stylesheet and resource management - 2008-07-06
+    - Fixed CSS copy bug and improved related documentation
+    - Added =copy(from, to)= utility to copy arbitrary resources
+    - Added =is_true= assertion
+    - Restructured the introductory documentation
+
+*** Release 0.8 - JUnit4.5beta compatibility - 2008-07-01
+Bumblebee is now JUnit 4.5beta compatible.
+    
+    - JUnit4.5beta compatibility, removed an incompatible constructor on the suites
+    - Removed unnecessary usages of =get_value=
+
+*** Release 0.7 - Simplified runtime data inclusion - 2008-06-27
+Simpler storage and retrieval methods for runtime data.
+
+    - Added #{runtimeDataKey} syntax to retrieve runtime data
+    - Static import for the store method
+    - Removed TestFailure parameter
+
+*** Release 0.6 - Web and Swing documentation enablers - 2008-06-25
+This is the first micro-release of Bumblebee. 
+
+    - Added =com.agical.bumblebee.imaging.Imaging= class for Swing and Web snapshots
+    - Improved error message for when the source roots aren't correctly configured
+    - Examples of Swing and Web GUI documentation at the Bumblebee Google group
+
+*** Release 0.5 - Better feedback - 2008-06-21
+
+This release has focused on getting better error messages and feedback from Bumeblebee to the user.
+
+Packaging has improved, and now includes a =bumblebee-all= jar and a =bumblebee-all-no-junit= jar. 
+For some reason the jars are not compressed by Buildr, which results in rather large download size. I'm 
+sorry for any inconvenience.
+
+This is the last aggregated release. Future releases will be made whenever a feature is ready, and 
+hopefully that will result in a more steady flow, and this will eliminate the need for SNAPSHOTS releases.
+
+***** =New and changed features=
+    - Extended packaging including an 'all' jar, JavaDoc and sources for the Maven repo.
+    - Bumblebee now uses JRuby 1.1
+    - The annotation class =BumblebeeCollectors= has moved, so classes using it needs to optimize imports in order to work.
+    - When JRuby throws an exception it leads to a JUnit error pointing at the failing test/class
+    - Added arbitrary properties to all nodes (configuration works as before)
+    - Add only existing directories in Maven defaults to avoid warnings
+    - Java Class and Method objects are exposed on node in comments (current class/current method)
+    - Experimental: =bootstrap.rb= files are included in bumblebee, where =bumblebee_bootstrap.rb= is loaded first
+        - HTML can be used in comments instead of wiki-syntax
+    - Experimental: There is an =execution= property on each node holding the execution meta information, and it has exception/completion hooks.
+    - Experimental: Parameterized tests can be used
+    - Experimental: Theories can be used
+    - The AgileDox-collector presents stack trace (on error) and execution time
+
+***** =Bugfixes and internal work=
+    - Document-wide closure execution on enter- and exit root, class, method, throwing method. 
+        - Traversal actions are list of closures
+        - Expose the list of traversers in the bootstrap file
+    - Deleted RubyScriptProvider
+    - Fixed first code example.
+    - Replace all snip with >>>><<<<
+    - Suites that document features that would break the main doc are run separately (failing/html) and linked in.
+    - Generalize test-failure to be test-result
+    - Changed interface of Collector to be more generic
+
+*** Release 0.4 - Get the Node model in place - 2008-02-26
+
+This release had the goal of creating and exposing a more consistent node model.
+The release should only require minor changes in existing applications using Bumblebee, 
+but the possibilities to retrieve data, to configure and style the documentation has 
+improved significantly. 
+
+These improvements are partially explained in the documentation where needed, but the implementation
+has mostly been a refactoring of existing functionality, hence all new possibilities haven't been
+explored enough yet.
+
+One of the important-to-remember changes is that class- and suite level comments are now commented with two **!!**
+instead of one **!** to simplify parsing.
+
+Below is a list of changes, improvements and bug-fixes.
+
+***** =New and changed features=
+    - The representation of the document is an hierarchical Node model
+    - Snippets can use specific syntax to create inline snippets
+    - There is an index for the document
+    - There is a way to get test results from the Java tests in the documentation
+    - There are sensible defaults for configurations
+    - /*!! is used for class level comments to simplify parsing
+    - Wiki text can be included from Ruby command and parsed with the rest
+    - It is easy to make cross references within Bumblebee
+    - Include backlog and releases in documentation
+    - Line ranges are 1-based instead of 0-based
+    - Plain text can be included from ruby command
+    - Document can be generated also when tests fail
+    - It is possible to change document title
+    - There is a SensibleRubyCollector for a single project with Maven directory structure
+    - /***!m1***/ markers are enabled (no line break before closing comment)
+    - There is documentation on how to include inner classes
+    - Can set arbitrary configuration properties to use in document
+    - It is possible to configure the document title
+    - A custom stylesheet can be used
+    - A default stylesheet is used when a custom stylesheet is not defined
+    - Added a copyright with a configurable inception year
+
+***** =Bugfixes and internal work=
+    - QDox' inability to parse some files doesn't crash Bumblebee (http://jira.codehaus.org/browse/QDOX-131)
+    - Bumblebee uses the newline character sequence from the system property  
+    - There is no NPE when using non-existing source root, only a warning message
+    - The first test comment does not occur as class comment when the class comment does not exist
+    - Buildr produces version 1.5 class files
+    - SourceExtractor can work with Java Class and Method objects
+    - Structured the Ruby code with one file/class    
+    - HTML-writing is in a class of its own
+
+*** Release 0.3 - Multiple input formats - 2007-12-01
+
+    - Split DemonstratingMethodComments into several parts
+    - *Get contents of arbitrary file*
+    - *Lines-slicer*
+    - *Run scripts from comment*
+    - *Change the input to avoid duplication with Ruby functions.*
+    - *changed to snip <text>*
+    - *removed file method*
+    - Build with Buildr
+    - create delivery
+
+*** Release 0.2 - Object-orient the information extraction model - 2007-11-11
+
+*** Release 0.1 - Get it out - 2007-11-01

@@ -1,0 +1,12 @@
+
+*** The history of Bumblebee
+Bumblebee springs from the experiences from TDDoc, a documentation add-on to RMock. The ideas and concepts are pretty much the same, but the 
+implementation approach is different. 
+
+*** Projects using Bumblebee
+    - [[http://www.dtangler.org/builds][dtangler]] - Follow the link to the top-most successful build, then =/documentation= 
+
+*** Need more support?
+Bumblebee is an open source project that I work on when I'm not consulting or otherwise tending my company 
+[[http://www.agical.com][Agical]]. If you desperately need some feature, please contact me 
+at daniel.brolund@agical.com and we'll work something out.

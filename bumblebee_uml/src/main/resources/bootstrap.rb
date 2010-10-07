@@ -1,0 +1,1 @@
+require 'bumblebee/uml/class_diagram.rb'

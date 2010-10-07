@@ -1,0 +1,1 @@
+"The result of script evaluation: " + (4712-1).to_s

@@ -1,0 +1,7 @@
+<classpath>
+  <classpathentry path="src/main/java" excluding="**/.svn/|**/CVS/" kind="src"/>
+  <classpathentry path="src/test/java" excluding="**/.svn/|**/CVS/" output="target/test/classes" kind="src"/>
+  <classpathentry path="classes" kind="output"/>
+  <classpathentry path="M2_REPO/junit/junit/4.4/junit-4.4.jar" kind="var"/>
+  <classpathentry path="org.eclipse.jdt.launching.JRE_CONTAINER" kind="con"/>
+</classpath>

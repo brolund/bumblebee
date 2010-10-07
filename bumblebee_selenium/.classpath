@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/test/resources"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee_jruby"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee_junit4"/>
+	<classpathentry kind="var" path="M2_REPO/com/thoughtworks/qdox/qdox/1.7-20070527.154641-2/qdox-1.7-20070527.154641-2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.1/commons-collections-3.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="var" path="M2_REPO/fr/lifl/parsing/1.0.1/parsing-1.0.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/jhighlight/jhighlight/1.0/jhighlight-1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/4.4/junit-4.4.jar"/>
+	<classpathentry kind="var" path="M2_REPO/oqube/muse/muse-parser/1.0-rc3/muse-parser-1.0-rc3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/jruby/jruby-complete/1.1/jruby-complete-1.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="M2_REPO/javax/servlet/servlet-api/2.4/servlet-api-2.4.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/org/seleniumhq/selenium/client-drivers/selenium-java-client-driver/1.0-beta-2/selenium-java-client-driver-1.0-beta-2.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/org/seleniumhq/selenium/core/selenium-core/1.0-beta-2/selenium-core-1.0-beta-2.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/org/seleniumhq/selenium/server/selenium-server/1.0-beta-2/selenium-server-1.0-beta-2.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/org/seleniumhq/selenium/server/selenium-server/1.0-beta-2/selenium-server-1.0-beta-2-standalone.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/org/seleniumhq/selenium/server/selenium-server-coreless/1.0-beta-2/selenium-server-coreless-1.0-beta-2.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

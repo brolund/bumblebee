@@ -1,0 +1,144 @@
+import umlspeed.classes.ums;
+import umlspeed.usecases.ums;
+import umlspeed.components.ums;
+
+usecasediagram umlspeed_compiler_usecases {
+	comment = "Compiler use cases";
+	layout = usecase;
+	entities {
+		user uses compilesvg;
+		compilesvg extends compile;
+		user uses compilexmi;
+		compilexmi extends compile;
+	}
+	documentation = "
+	<p>A simple outline of the compiler use case. The default usecase
+	layout is a simple tree layout running from left to right
+	based on number of links.</p>
+	";
+}
+
+classdiagram umlspeed_compiler_classes {
+	comment = "Compiler classes";
+	layout = satellite (Parser);
+	entities {
+		Parser depends CLI;
+		Parser extends Lexer;
+		ClassParser extends Parser;
+		ImportParser extends Parser;
+		InterfaceParser extends Parser;
+	}
+	documentation = "
+	<p>The compiler classes are built around a number of
+	parser classes that all subclass the main Parser class.
+	Unusually for a compiler, instead of the Lexer feeding the
+	parsers, the parsers pull from the Lexer instead.</p>
+	<p>This diagram shows the satellite layout, where all classes
+	are arranged around one central class.</p>
+	";
+}
+
+classdiagram umlspeed_svg_classes {
+	comment = "SVG rendering classes";
+	layout = grid(3, 
+		SVGDimension, 	*, 		SVGGridLayout,
+		SVGPosition,	SVGEntity, 	SVGLayout,
+		*,		*,		SVGSatelliteLayout);
+	
+	entities {
+		SVGGridLayout implements SVGLayout;
+		SVGSatelliteLayout implements SVGLayout;
+		SVGGridLayout onetomany SVGEntity;
+		SVGSatelliteLayout onetomany SVGEntity;
+		SVGEntity depends SVGDimension;
+		SVGEntity depends SVGPosition;
+	}
+	documentation = "
+	<p>These are some of the SVG rendering classes. The hierarchy
+	is very similar to a GUI windowing kit, like Swing or SWT as
+	all components are divided into containers and subcontainers.
+	All components descend SVGEntity.
+	</p>
+	<p>
+	This layout is grid layout, where each component can be placed
+	on an imaginary grid. Grid cells are sized to the largest 
+	component.
+	</p>
+	";
+}
+
+classdiagram umlspeed_svg_classes_pkg {
+	comment = "SVG rendering classes";
+	layout = grid(4, 
+		SVGDimension, *, SVGGridLayout, *,
+		SVGPosition,	SVGEntity, SVGLayout, CLI,
+		 *, *, SVGSatelliteLayout, *,
+		pkg:Command Line Interface:3:1:1:1,
+		pkg:SVG Rendering Classes:0:0:3:3);
+	
+	entities {
+		CLI depends SVGLayout;
+		SVGGridLayout implements SVGLayout;
+		SVGSatelliteLayout implements SVGLayout;
+		SVGGridLayout onetomany SVGEntity;
+		SVGSatelliteLayout onetomany SVGEntity;
+		SVGEntity depends SVGDimension;
+		SVGEntity depends SVGPosition;
+	}
+	documentation = "
+	<p>This is the same diagram as previously shown, but demonstrating
+	the package structure. Grid layout allows the definition of 
+	packages around grid cells.</p>
+	";
+}
+
+classdiagram umlspeed_svg_hierarchy {
+	comment = "SVG rendering classes";
+	layout = hierarchy;
+	entities {
+		SVGGridLayout implements SVGLayout;
+		SVGSatelliteLayout implements SVGLayout;
+		SVGGridLayout onetomany SVGEntity;
+		SVGSatelliteLayout onetomany SVGEntity;
+		SVGEntity depends SVGDimension;
+		SVGEntity depends SVGPosition;
+	}
+	documentation = "
+	<p>Instead of using the grid layout and manually placing components,
+	UMLSpeed can instead construct a tree based on the number of links
+	a component has and use it to lay them out automatically.</p>
+	";
+}
+
+sequencediagram umlspeed_svg_render {
+	comment = "SVG rendering sequence";
+	entities {
+		CLI creates SVGRenderer;
+		CLI invokes SVGRenderer render;
+		SVGRenderer creates SVGLayout;
+		SVGRenderer creates SVGEntity;
+		SVGRenderer invokes SVGLayout render;
+		SVGLayout invokes SVGEntity setPosition;
+		SVGLayout invokes SVGEntity render;
+	}
+	documentation = "
+	<p>This is a simple sequence diagram, showing the call stack
+	during rendering. Sequence diagrams only allow one layout and
+	since they only rely on exist class/method entities are very
+	quick to produce.</p>
+	";
+}
+
+
+deploymentdiagram umlspeed_deployment {
+	comment = "Deployment Diagram";
+	entities {
+		umlspeed "JDBC" db;
+	}
+	documentation = "
+	<p>UMLSpeed can also handle deployment diagrams. Deployment entities
+	are defined as either nodes or databases to handle the visual
+	appearance. Nodes can contain many components, categorised as 
+	components or third party software.</p>
+	";
+}

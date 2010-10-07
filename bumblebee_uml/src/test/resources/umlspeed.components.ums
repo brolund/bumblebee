@@ -1,0 +1,24 @@
+
+component umlspeed_compiler = "UMLSpeed Compiler";
+component umlspeed_eclipse = "Eclipse Plugin";
+component umlspeed_maven = "Maven Plugin";
+component vim = "Vi Improved";
+
+deployment umlspeed {
+	name = "UMLSpeed";
+	platform = "Linux";
+	type = node;
+	contents {
+		component umlspeed_compiler;
+		component umlspeed_eclipse;
+		component umlspeed_maven;
+		software vim;
+	}
+}
+
+deployment db {
+	name = "Database";
+	platform = "PostgreSQL 8.1";
+	type = database;
+}
+

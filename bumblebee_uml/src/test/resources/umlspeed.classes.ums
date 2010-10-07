@@ -1,0 +1,131 @@
+/*
+	Some of the UMLSpeed compiler classes.
+*/
+
+namespace net.sf.umlspeed.cli;
+
+class CLI {
+	comment = "Command line interface";
+	operations {
+		+print(message: String): void;
+		+print(message: String, verbosity: int): void;
+	}
+}
+
+namespace net.sf.umlspeed.parser;
+
+class Lexer {
+	comment = "Base lexer/parser";
+	fields {
+		#buffer: String;
+		#currentPosition: int;
+		#currentToken: String;
+		#filename: String;
+	}
+	operations {
+		+BufferFile(file: File): void;
+		#findNextToken(): String;
+		#isTerminator(c: char): boolean;
+		#isWhiteSpace(c: char): boolean;
+	}
+}
+
+class Parser (Lexer) {
+	comment = "Base parser";
+	operations {
+		#assertToken(token: String): boolean;
+		#parseError(message: String): void;
+		+parse(): void;
+	}
+}
+
+class ClassParser (Parser) {
+	operations {
+		-parseComment(): void;
+		-parseFields(): void;
+		-parseOperations(): void;
+	}
+}
+
+class InterfaceParser (Parser) {
+	operations {
+		-parseComment(): void;
+		-parseOperations(): void;
+	}
+}
+
+class ImportParser (Parser) {
+}
+
+/*
+	Some of the UMLSpeed SVG rendering classes
+*/
+
+namespace net.sf.umlspeed.svg;
+
+class SVGRenderer {
+	operations {
+		+render(): void;
+		-renderUseCaseDiagram(): void;
+		-renderSequenceDiagram(): void;
+		-renderClassDiagram(): void;
+	}
+}
+
+interface SVGLayout {
+	operations {
+		+add(e: SVGEntity): void;
+		+remove(e: SVGEntity): void;
+		+getObjects(): List;
+		+render(): void;
+	}
+}
+
+class SVGGridLayout {
+	operations {
+		+add(e: SVGEntity): void;
+		+remove(e: SVGEntity): void;
+		+getObjects(): List;
+	}
+}
+
+class SVGSatelliteLayout {
+	operations {
+		+add(e: SVGEntity): void;
+		+remove(e: SVGEntity): void;
+		+getObjects(): List;
+	}
+}
+
+class SVGPosition {
+	fields {
+		+x: int;
+		+y: int;
+	}
+	operations {
+		+getX(): int;
+		+getY(): int;
+	}
+}
+
+class SVGDimension {
+	fields {
+		+width: int;
+		+height: int;
+	}
+	operations {
+		+getWidth(): int;
+		+getHeight(): int;
+	}
+}
+
+class SVGEntity {
+	operations {
+		+getEntity(): Entity;
+		+getPosition(): SVGPosition;
+		+getSize(): SVGDimension;
+		+render(): void;
+		+setPosition(p: SVGPosition): void;
+		+setSize(d: SVGDimension): void;
+	}
+}

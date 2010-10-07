@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="src/test/resources"/>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" path="src/test/java"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/junit/junit/4.5/junit-4.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/asm/asm/3.1/asm-3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="umlspeed-0.19/umlspeed.jar" sourcepath="umlspeed-0.19/src"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-rasterizer/1.6/batik-rasterizer-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-awt-util/1.6/batik-awt-util-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-bridge/1.6/batik-bridge-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-css/1.6/batik-css-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-dom/1.6/batik-dom-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-gvt/1.6/batik-gvt-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-parser/1.6/batik-parser-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-script/1.6/batik-script-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-svg-dom/1.6/batik-svg-dom-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-transcoder/1.6/batik-transcoder-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-util/1.6/batik-util-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-xml/1.6/batik-xml-1.6.jar"/>
+	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-ext/1.6/batik-ext-1.6.jar"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/bumblebee"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

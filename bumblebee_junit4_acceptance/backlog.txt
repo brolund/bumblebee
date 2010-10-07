@@ -1,0 +1,36 @@
+
+The sprints was abandoned from version 0.5, and new releases will be published as soon 
+as any *minimum marketable feature* is implemented. This is the queue of possible items, 
+and it will be affected by any user input given:
+
+*** Queue
+    - Make BB work with classes instead of strings
+    - Built in support for documenting web sites using Selenium 
+    - Build in support for documenting Swing GUIs
+    - Proprietary wiki parser
+        - Make sure that links to documents with underscore in their names gets rendered correctly
+        - Further extend the WikiParser to enable any output format
+    - JavaScript output to make documentation more comprehensive
+    - The current Ruby Node (suite, class or method) is available in the java test for manipulation
+    - Support for documenting SWT GUIs
+    - Runtime-variables can have global scope (just use Ruby)
+    - The code/comment parsing is pluggable
+    - The wiki-format used in the comments is pluggable
+    - It is easy to make external references to e.g. JavaDoc and Xref
+    - It is possible to filter out (Bumblebee) comments when including code
+    - Parallel tests
+    - JUnit report
+    - Assertions are more general and extensible.
+    - When calling methods that are not there, e.g. #{snip clazz.nonExisting} an understandable error message is presented
+    - Documentation on how to extend Bumblebee
+        - Move internals and reference documentation to its own suite(?)
+        - Node model
+        - Format traversers
+        - Closure execution
+    - The from.m1.to.m2 construct without the .to.m2 retrieves the code for the rest of the method  
+    - Bugs and inconsistencies
+        - SourceExtractor and the Ruby From class are making assumptions about each other
+    - There is a Docbook generating module
+    - RDoc integration
+    - Goo-implementation
+    - Aspect-driven collector for call sequences etc.

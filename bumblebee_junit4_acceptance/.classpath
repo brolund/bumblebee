@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" output="resources" path="src/main/resources"/>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" output="test/classes" path="src/test/java"/>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" output="test/resources" path="src/test/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee_jruby"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee_junit4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee_uml"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee_selenium"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee_swing"/>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/4.5/junit-4.5.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

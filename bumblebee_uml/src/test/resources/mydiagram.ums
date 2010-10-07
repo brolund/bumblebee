@@ -1,0 +1,36 @@
+namespace com.agical.bumblebee.uml;
+class UmlClass {
+    comment = "";
+    operations {
+        +meth(): void;
+        +parameterizedMethod(parameter: String): void;
+        +returnValue(i: int, indata: OtherObject): OtherObject;
+        #packageMethod(): void;
+        #protectedMethod(): void;
+        -privateMethod(): void;
+        +generics(map: Map<OtherObject UmlClass>): List<String>;
+        +nestedGenerics(map: Map<OtherObject List<String>>): List<String>;
+    }
+}
+class OtherObject {
+    comment = "";
+    operations {
+    }
+}
+
+
+classdiagram mydiagram {
+    comment = "Compiler classes";
+    layout = satellite (UmlClass);
+    entities {
+        UmlClass extends OtherObject;
+    }
+    documentation = "
+    <p>The compiler classes are built around a number of
+    parser classes that all subclass the main Parser class.
+    Unusually for a compiler, instead of the Lexer feeding the
+    parsers, the parsers pull from the Lexer instead.</p>
+    <p>This diagram shows the satellite layout, where all classes
+    are arranged around one central class.</p>
+    ";
+}

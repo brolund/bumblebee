@@ -1,0 +1,9 @@
+/*
+	Use cases/actors.
+
+*/
+
+actor user = "User";
+usecase compile = "Compile";
+usecase compilesvg = "Compile UML to SVG";
+usecase compilexmi = "Compile UML to XMI";

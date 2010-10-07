@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" path="src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee_jruby"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bumblebee_junit4"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

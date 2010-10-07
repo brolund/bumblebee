@@ -1,0 +1,7 @@
+* Run for both junit 4.4 and 4.5
+* Update releases.txt and backlog.txt
+* Tag Bazaar
+* Update version number in build file
+* 
+
+note to self: Try to automate these steps
