@@ -1,0 +1,1 @@
+Bumblebee helps you distill available information from executing code (JUnit test cases) to provide human-friendly documentation with minimal effort and intrusion while providing maximum expressive power, executional power, flexibility and extensibility. 
