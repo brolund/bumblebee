@@ -32,15 +32,6 @@ define 'com.agical.bumblebee' do
     project.compile.options.target = "1.5"
     
     repositories.release_to = "file:///tmp/bumblebee_upload_repo"
-
-#    desc 'Alternative JUnit core runner.'
-#    define 'junitalt' do
-#        test.include 'com.agical.bumblebee.junit4.runners.TestingSuite'
-#        compile.with  JUNIT
-#        package :jar, :id => 'junitalt'
-#        package :sources, :id => 'junitalt'
-#        package :javadoc, :id => 'junitalt'
-#    end
     
     desc 'Bumblebee is a framework for generating useful, human-friendly documentation from executing code.'
     define 'bumblebee' do
