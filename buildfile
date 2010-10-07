@@ -11,6 +11,10 @@ repositories.remote << 'http://nexus.openqa.org/content/repositories/snapshots'
 require 'dependencies.rb'
 
 UMLSPEED=artifact(UMLSPEED_NAME).from(file('./bumblebee_uml/umlspeed-0.19/umlspeed.jar'))
+MUSE=[artifact(MUSE_NAME).from(file('./bumblebee/muse-parser/muse-parser-1.0-rc3.jar')), 
+	artifact(LIFL_NAME).from(file('./bumblebee/muse-parser/parsing-1.0.1.jar')),
+	artifact(JHIGHLIGHT_NAME).from(file('./bumblebee/muse-parser/jhighlight-1.0.jar'))
+	]
 
 #BUMBLEBEE_DEP = [BUMBLEBEE, MUSE_PARSER, PMD]
 #BUMBLEBEE_JUNIT4_DEP = [BUMBLEBEE_DEP, JUNIT]
@@ -35,7 +39,7 @@ define 'com.agical.bumblebee' do
     
     desc 'Bumblebee is a framework for generating useful, human-friendly documentation from executing code.'
     define 'bumblebee' do
-        compile.with MUSE_PARSER, JUNIT,PMD
+        compile.with MUSE, MUSE_PARSER, JUNIT,PMD
         test.include 'com.agical.bumblebee.TestAll'
         package :jar, :id => 'bumblebee'
         package :sources, :id => 'bumblebee'
@@ -65,7 +69,7 @@ define 'com.agical.bumblebee' do
     desc 'This is a UML extension to draw diagrams of different kinds'
     define 'bumblebee_uml' do
         compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY,
-                  JUNIT, MUSE_PARSER, JRUBY, PMD, BATIK, UMLSPEED
+                  JUNIT, MUSE, MUSE_PARSER, JRUBY, PMD, BATIK, UMLSPEED
         test.include 'com.agical.bumblebee.uml.TestAll'
         package :jar, :id => 'bumblebee_uml'
         package :sources, :id => 'bumblebee_uml'
@@ -75,7 +79,7 @@ define 'com.agical.bumblebee' do
     desc 'This is an extension to use Bumblebee with Selenium'
     define 'bumblebee_selenium' do
         compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY,
-                  JUNIT, MUSE_PARSER, JRUBY, PMD, SELENIUM
+                  JUNIT, MUSE, MUSE_PARSER, JRUBY, PMD, SELENIUM
         test.include 'com.agical.bumblebee.selenium.TestAll'
         package :jar, :id => 'bumblebee_selenium'
         package :sources, :id => 'bumblebee_selenium'
@@ -85,7 +89,7 @@ define 'com.agical.bumblebee' do
     desc 'This is an extension to use Bumblebee with Swing'
     define 'bumblebee_swing' do
         compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY,
-                  JUNIT, MUSE_PARSER, JRUBY, PMD
+                  JUNIT, MUSE, MUSE_PARSER, JRUBY, PMD
         test.include 'com.agical.bumblebee.swing.TestAll'
         package :jar, :id => 'bumblebee_swing'
         package :sources, :id => 'bumblebee_swing'
@@ -96,7 +100,7 @@ define 'com.agical.bumblebee' do
     define 'bumblebee_junit4_acceptance' do
       test.include 'com.agical.bumblebee.acceptance.AllTest'
       compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY, BUMBLEBEE_UML,BUMBLEBEE_SWING, BUMBLEBEE_SELENIUM,
-                  JUNIT, MUSE_PARSER, JRUBY,PMD,UMLSPEED,BATIK,SELENIUM
+                  JUNIT, MUSE, MUSE_PARSER, JRUBY,PMD,UMLSPEED,BATIK,SELENIUM
       core_no_junit = package(:jar, :id=>'bumblebee-core-no-junit')
  
       compile.classpath.each {|c| core_no_junit.merge(c).
