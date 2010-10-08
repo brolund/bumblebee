@@ -1,6 +1,8 @@
 .metadata
 classes
 *.class
+*~
+.*~
 .hgignore
 export.zip
 target
@@ -21,3 +23,4 @@ org.eclipse.ltk.core.*
 fromzip
 timereporter/fromzip
 junitalt/reports
+RemoteSystemsTempFiles
