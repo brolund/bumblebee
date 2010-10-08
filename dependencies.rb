@@ -41,11 +41,15 @@ SELENIUM_OLD = [
     'org.openqa.selenium.server:selenium-server-coreless:jar:0.9.2']
 
 SELENIUM_1_0 = [
-    'org.seleniumhq.selenium.client-drivers:selenium-java-client-driver:jar:1.0-beta-2',
-    'org.seleniumhq.selenium.server:selenium-server:jar:1.0-beta-2',
-    'org.seleniumhq.selenium.server:selenium-server:jar:standalone:1.0-beta-2',
-    'org.seleniumhq.selenium.core:selenium-core:jar:1.0-beta-2',
-    'org.seleniumhq.selenium.server:selenium-server-coreless:jar:1.0-beta-2']
+    'org.seleniumhq.selenium.client-drivers:selenium-java-client-driver:jar:1.0.1',
+    'org.seleniumhq.selenium.server:selenium-server:jar:1.0.1',
+    'org.seleniumhq.selenium.server:selenium-server:jar:standalone:1.0.1',
+    'org.seleniumhq.selenium.core:selenium-core:jar:1.0.1',
+    'org.seleniumhq.selenium.server:selenium-server-coreless:jar:1.0.1']
+
+SELENIUM_2_0 = [
+    'org.seleniumhq.selenium:selenium:jar:2.0a5',
+    'org.seleniumhq.selenium:selenium-server:jar:2.0a5']
 
 SELENIUM = SELENIUM_1_0
 JETTY = ['jetty:jetty:jar:5.01.1']

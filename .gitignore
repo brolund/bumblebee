@@ -12,6 +12,7 @@ slask*
 bumblebee_junit4_acceptance/reports
 bumblebee_junit4/reports
 bumblebee_jruby/reports
+bumblebee_uml/reports
 bumblebee/reports
 .settings
 bumblebee_junit4_acceptance/.settings

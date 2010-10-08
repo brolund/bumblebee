@@ -1,26 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" path="src/main/java"/>
-	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry kind="src" path="src/test/resources"/>
-	<classpathentry excluding="**/.svn/|**/CVS/" kind="src" path="src/test/java"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/junit/junit/4.5/junit-4.5.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/asm/asm/3.1/asm-3.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="umlspeed-0.19/umlspeed.jar" sourcepath="umlspeed-0.19/src"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-rasterizer/1.6/batik-rasterizer-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-awt-util/1.6/batik-awt-util-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-bridge/1.6/batik-bridge-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-css/1.6/batik-css-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-dom/1.6/batik-dom-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-gvt/1.6/batik-gvt-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-parser/1.6/batik-parser-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-script/1.6/batik-script-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-svg-dom/1.6/batik-svg-dom-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-transcoder/1.6/batik-transcoder-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-util/1.6/batik-util-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-xml/1.6/batik-xml-1.6.jar"/>
-	<classpathentry exported="true" kind="var" path="M2_REPO/batik/batik-ext/1.6/batik-ext-1.6.jar"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/bumblebee"/>
-	<classpathentry kind="output" path="classes"/>
+  <classpathentry kind="src" path="src/main/java" excluding="**/.svn/|**/CVS/"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/.svn/|**/CVS/" output="target/resources"/>
+  <classpathentry kind="src" path="src/test/java" excluding="**/.svn/|**/CVS/" output="target/test/classes"/>
+  <classpathentry kind="src" path="src/test/resources" excluding="**/.svn/|**/CVS/" output="target/test/resources"/>
+  <classpathentry kind="src" combineaccessrules="false" path="/bumblebee"/>
+  <classpathentry kind="src" combineaccessrules="false" path="/bumblebee_jruby"/>
+  <classpathentry kind="src" combineaccessrules="false" path="/bumblebee_junit4"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.6/junit-4.6.jar" sourcepath="M2_REPO/junit/junit/4.6/junit-4.6-sources.jar" javadocpath="M2_REPO/junit/junit/4.6/junit-4.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/oqube/muse/muse-parser/1.0-rc3/muse-parser-1.0-rc3.jar" sourcepath="M2_REPO/oqube/muse/muse-parser/1.0-rc3/muse-parser-1.0-rc3-sources.jar" javadocpath="M2_REPO/oqube/muse/muse-parser/1.0-rc3/muse-parser-1.0-rc3-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/fr/lifl/parsing/1.0.1/parsing-1.0.1.jar" sourcepath="M2_REPO/fr/lifl/parsing/1.0.1/parsing-1.0.1-sources.jar" javadocpath="M2_REPO/fr/lifl/parsing/1.0.1/parsing-1.0.1-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/jhighlight/jhighlight/1.0/jhighlight-1.0.jar" sourcepath="M2_REPO/jhighlight/jhighlight/1.0/jhighlight-1.0-sources.jar" javadocpath="M2_REPO/jhighlight/jhighlight/1.0/jhighlight-1.0-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.1/commons-collections-3.1.jar" sourcepath="M2_REPO/commons-collections/commons-collections/3.1/commons-collections-3.1-sources.jar" javadocpath="M2_REPO/commons-collections/commons-collections/3.1/commons-collections-3.1-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar" sourcepath="M2_REPO/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4-sources.jar" javadocpath="M2_REPO/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jruby/jruby-complete/1.1/jruby-complete-1.1.jar" sourcepath="M2_REPO/org/jruby/jruby-complete/1.1/jruby-complete-1.1-sources.jar" javadocpath="M2_REPO/org/jruby/jruby-complete/1.1/jruby-complete-1.1-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/pmd/pmd/4.2.4/pmd-4.2.4.jar" sourcepath="M2_REPO/pmd/pmd/4.2.4/pmd-4.2.4-sources.jar" javadocpath="M2_REPO/pmd/pmd/4.2.4/pmd-4.2.4-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/jaxen/jaxen/1.1.1/jaxen-1.1.1.jar" sourcepath="M2_REPO/jaxen/jaxen/1.1.1/jaxen-1.1.1-sources.jar" javadocpath="M2_REPO/jaxen/jaxen/1.1.1/jaxen-1.1.1-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/asm/asm/3.1/asm-3.1.jar" sourcepath="M2_REPO/asm/asm/3.1/asm-3.1-sources.jar" javadocpath="M2_REPO/asm/asm/3.1/asm-3.1-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-rasterizer/1.6/batik-rasterizer-1.6.jar" sourcepath="M2_REPO/batik/batik-rasterizer/1.6/batik-rasterizer-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-rasterizer/1.6/batik-rasterizer-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-awt-util/1.6/batik-awt-util-1.6.jar" sourcepath="M2_REPO/batik/batik-awt-util/1.6/batik-awt-util-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-awt-util/1.6/batik-awt-util-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-bridge/1.6/batik-bridge-1.6.jar" sourcepath="M2_REPO/batik/batik-bridge/1.6/batik-bridge-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-bridge/1.6/batik-bridge-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-css/1.6/batik-css-1.6.jar" sourcepath="M2_REPO/batik/batik-css/1.6/batik-css-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-css/1.6/batik-css-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-dom/1.6/batik-dom-1.6.jar" sourcepath="M2_REPO/batik/batik-dom/1.6/batik-dom-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-dom/1.6/batik-dom-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-ext/1.6/batik-ext-1.6.jar" sourcepath="M2_REPO/batik/batik-ext/1.6/batik-ext-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-ext/1.6/batik-ext-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-gvt/1.6/batik-gvt-1.6.jar" sourcepath="M2_REPO/batik/batik-gvt/1.6/batik-gvt-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-gvt/1.6/batik-gvt-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-parser/1.6/batik-parser-1.6.jar" sourcepath="M2_REPO/batik/batik-parser/1.6/batik-parser-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-parser/1.6/batik-parser-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-script/1.6/batik-script-1.6.jar" sourcepath="M2_REPO/batik/batik-script/1.6/batik-script-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-script/1.6/batik-script-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-svg-dom/1.6/batik-svg-dom-1.6.jar" sourcepath="M2_REPO/batik/batik-svg-dom/1.6/batik-svg-dom-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-svg-dom/1.6/batik-svg-dom-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-transcoder/1.6/batik-transcoder-1.6.jar" sourcepath="M2_REPO/batik/batik-transcoder/1.6/batik-transcoder-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-transcoder/1.6/batik-transcoder-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-util/1.6/batik-util-1.6.jar" sourcepath="M2_REPO/batik/batik-util/1.6/batik-util-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-util/1.6/batik-util-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/batik/batik-xml/1.6/batik-xml-1.6.jar" sourcepath="M2_REPO/batik/batik-xml/1.6/batik-xml-1.6-sources.jar" javadocpath="M2_REPO/batik/batik-xml/1.6/batik-xml-1.6-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/xerces/xercesImpl/2.5.0/xercesImpl-2.5.0.jar" sourcepath="M2_REPO/xerces/xercesImpl/2.5.0/xercesImpl-2.5.0-sources.jar" javadocpath="M2_REPO/xerces/xercesImpl/2.5.0/xercesImpl-2.5.0-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/xml-apis/xmlParserAPIs/2.0.2/xmlParserAPIs-2.0.2.jar" sourcepath="M2_REPO/xml-apis/xmlParserAPIs/2.0.2/xmlParserAPIs-2.0.2-sources.jar" javadocpath="M2_REPO/xml-apis/xmlParserAPIs/2.0.2/xmlParserAPIs-2.0.2-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/umlspeed/umlspeed/0.19/umlspeed-0.19.jar" sourcepath="M2_REPO/umlspeed/umlspeed/0.19/umlspeed-0.19-sources.jar" javadocpath="M2_REPO/umlspeed/umlspeed/0.19/umlspeed-0.19-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.7/junit-4.7.jar" sourcepath="M2_REPO/junit/junit/4.7/junit-4.7-sources.jar" javadocpath="M2_REPO/junit/junit/4.7/junit-4.7-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jmock/jmock/2.5.1/jmock-2.5.1.jar" sourcepath="M2_REPO/org/jmock/jmock/2.5.1/jmock-2.5.1-sources.jar" javadocpath="M2_REPO/org/jmock/jmock/2.5.1/jmock-2.5.1-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jmock/jmock-junit4/2.5.1/jmock-junit4-2.5.1.jar" sourcepath="M2_REPO/org/jmock/jmock-junit4/2.5.1/jmock-junit4-2.5.1-sources.jar" javadocpath="M2_REPO/org/jmock/jmock-junit4/2.5.1/jmock-junit4-2.5.1-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar" sourcepath="M2_REPO/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1-sources.jar" javadocpath="M2_REPO/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-library/1.1/hamcrest-library-1.1.jar" sourcepath="M2_REPO/org/hamcrest/hamcrest-library/1.1/hamcrest-library-1.1-sources.jar" javadocpath="M2_REPO/org/hamcrest/hamcrest-library/1.1/hamcrest-library-1.1-javadoc.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 </classpath>

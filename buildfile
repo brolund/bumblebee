@@ -28,6 +28,7 @@ module Buildr
     end
 end
 
+
 desc 'Bumblebee'
 define 'com.agical.bumblebee' do 
     project.group = 'com.agical.bumblebee'
@@ -39,6 +40,7 @@ define 'com.agical.bumblebee' do
     
     desc 'Bumblebee is a framework for generating useful, human-friendly documentation from executing code.'
     define 'bumblebee' do
+	    project.eclipse.name = 'bumblebee'
         compile.with MUSE, MUSE_PARSER, JUNIT,PMD
         test.include 'com.agical.bumblebee.TestAll'
         package :jar, :id => 'bumblebee'
@@ -50,6 +52,7 @@ define 'com.agical.bumblebee' do
     on the collector and from the comments in classes and methods involved. The script is executed 
     and the resulting output can be processed further if neccessary.'
     define 'bumblebee_jruby' do
+	    project.eclipse.name = 'bumblebee_jruby'
         compile.with BUMBLEBEE, JRUBY, JUNIT
         test.include 'com.agical.bumblebee.jruby.TestAll'
         package :jar, :id => 'bumblebee_jruby'
@@ -59,6 +62,7 @@ define 'com.agical.bumblebee' do
     
     desc 'This is an extension to use JUnit4 for executing the code that Bumblebee collects data from.'
     define 'bumblebee_junit4' do
+	    project.eclipse.name = 'bumblebee_junit4'
         compile.with BUMBLEBEE, JUNIT
         test.include 'com.agical.bumblebee.junit4.TestAll'
         package :jar, :id => 'bumblebee_junit4'
@@ -68,6 +72,7 @@ define 'com.agical.bumblebee' do
 
     desc 'This is a UML extension to draw diagrams of different kinds'
     define 'bumblebee_uml' do
+	    project.eclipse.name = 'bumblebee_uml'
         compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY,
                   JUNIT, MUSE, MUSE_PARSER, JRUBY, PMD, BATIK, UMLSPEED
         test.include 'com.agical.bumblebee.uml.TestAll'
@@ -78,6 +83,7 @@ define 'com.agical.bumblebee' do
 
     desc 'This is an extension to use Bumblebee with Selenium'
     define 'bumblebee_selenium' do
+	    project.eclipse.name = 'bumblebee_selenium'
         compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY,
                   JUNIT, MUSE, MUSE_PARSER, JRUBY, PMD, SELENIUM
         test.include 'com.agical.bumblebee.selenium.TestAll'
@@ -88,6 +94,7 @@ define 'com.agical.bumblebee' do
 
     desc 'This is an extension to use Bumblebee with Swing'
     define 'bumblebee_swing' do
+	    project.eclipse.name = 'bumblebee_swing'
         compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY,
                   JUNIT, MUSE, MUSE_PARSER, JRUBY, PMD
         test.include 'com.agical.bumblebee.swing.TestAll'
@@ -98,6 +105,7 @@ define 'com.agical.bumblebee' do
 
     desc 'This module contains acceptance tests for the JUnit 4 and JRuby modules.'    
     define 'bumblebee_junit4_acceptance' do
+	  project.eclipse.name = 'bumblebee_junit4_acceptance'
       test.include 'com.agical.bumblebee.acceptance.AllTest'
       compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY, BUMBLEBEE_UML,BUMBLEBEE_SWING, BUMBLEBEE_SELENIUM,
                   JUNIT, MUSE, MUSE_PARSER, JRUBY,PMD,UMLSPEED,BATIK,SELENIUM
