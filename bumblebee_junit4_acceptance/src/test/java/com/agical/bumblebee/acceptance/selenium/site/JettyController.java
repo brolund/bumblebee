@@ -2,9 +2,9 @@ package com.agical.bumblebee.acceptance.selenium.site;
 
 import java.io.File;
 
-import org.mortbay.http.HttpContext;
-import org.mortbay.http.HttpServer;
-import org.mortbay.util.InetAddrPort;
+import org.openqa.jetty.http.HttpContext;
+import org.openqa.jetty.http.HttpServer;
+import org.openqa.jetty.util.InetAddrPort;
 import org.openqa.selenium.server.FsResourceLocator;
 import org.openqa.selenium.server.StaticContentHandler;
 
@@ -26,7 +26,7 @@ public class JettyController {
             httpServer = new HttpServer();
             httpServer.addListener(new InetAddrPort(8080));
             HttpContext context = httpServer.addContext("/");
-            StaticContentHandler staticContentHandler = new StaticContentHandler("http:s//localhost:45628");
+            StaticContentHandler staticContentHandler = new StaticContentHandler("http:s//localhost:45628", false);
             staticContentHandler.addStaticContent(new FsResourceLocator(dir));
             context.addHandler(staticContentHandler); 
             httpServer.start();

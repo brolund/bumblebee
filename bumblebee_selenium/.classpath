@@ -15,6 +15,8 @@
   <classpathentry kind="var" path="M2_REPO/jaxen/jaxen/1.1.1/jaxen-1.1.1.jar" sourcepath="M2_REPO/jaxen/jaxen/1.1.1/jaxen-1.1.1-sources.jar" javadocpath="M2_REPO/jaxen/jaxen/1.1.1/jaxen-1.1.1-javadoc.jar"/>
   <classpathentry kind="var" path="M2_REPO/asm/asm/3.1/asm-3.1.jar" sourcepath="M2_REPO/asm/asm/3.1/asm-3.1-sources.jar" javadocpath="M2_REPO/asm/asm/3.1/asm-3.1-javadoc.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium/2.0a5/selenium-2.0a5.jar" sourcepath="M2_REPO/org/seleniumhq/selenium/selenium/2.0a5/selenium-2.0a5-sources.jar" javadocpath="M2_REPO/org/seleniumhq/selenium/selenium/2.0a5/selenium-2.0a5-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-common/2.0a5/selenium-common-2.0a5.jar" sourcepath="M2_REPO/org/seleniumhq/selenium/selenium-common/2.0a5/selenium-common-2.0a5-sources.jar" javadocpath="M2_REPO/org/seleniumhq/selenium/selenium-common/2.0a5/selenium-common-2.0a5-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-chrome-driver/2.0a5/selenium-chrome-driver-2.0a5.jar" sourcepath="M2_REPO/org/seleniumhq/selenium/selenium-chrome-driver/2.0a5/selenium-chrome-driver-2.0a5-sources.jar" javadocpath="M2_REPO/org/seleniumhq/selenium/selenium-chrome-driver/2.0a5/selenium-chrome-driver-2.0a5-javadoc.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-server/2.0a5/selenium-server-2.0a5.jar" sourcepath="M2_REPO/org/seleniumhq/selenium/selenium-server/2.0a5/selenium-server-2.0a5-sources.jar" javadocpath="M2_REPO/org/seleniumhq/selenium/selenium-server/2.0a5/selenium-server-2.0a5-javadoc.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 </classpath>
