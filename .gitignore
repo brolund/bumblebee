@@ -6,6 +6,7 @@ classes
 .hgignore
 export.zip
 target
+bin
 bumblebee/target
 bumblebee_jruby/target
 bumblebee_junit4_acceptance/target

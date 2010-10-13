@@ -1,9 +1,13 @@
 package com.agical.bumblebee.parser;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FilterReader;
+import java.io.IOException;
 import java.io.Reader;
+import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -55,8 +59,20 @@ public class PmdParser {
             SourceTypeHandler sourceTypeHandler = SourceTypeHandlerBroker.getVisitorsFactoryForSourceType(sourceType);
             Parser parser = sourceTypeHandler.getParser();
             parser.setExcludeMarker("NOPMD");
-            Reader reader = new FileReader(file);
-            ASTCompilationUnit rootNode = (ASTCompilationUnit) parser.parse(reader);
+            
+            
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String fileContent = "";
+            try {
+            	String tmp = null;
+				while((tmp=reader.readLine())!=null) {
+					fileContent+=tmp.replace("\t", "    ") + NewLine.STR;
+				}
+			} catch (IOException e) {
+				throw new RuntimeException("Problem while reading " + file, e);
+			}
+            
+            ASTCompilationUnit rootNode = (ASTCompilationUnit) parser.parse(new StringReader(fileContent));
             sourceTypeHandler.getSymbolFacade().start(rootNode);
             compilationUnits.put(file.getAbsolutePath(), rootNode);
             return rootNode;

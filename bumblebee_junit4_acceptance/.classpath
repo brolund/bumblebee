@@ -10,6 +10,9 @@
   <classpathentry kind="src" combineaccessrules="false" path="/bumblebee_swing"/>
   <classpathentry kind="src" combineaccessrules="false" path="/bumblebee_uml"/>
   <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/jetty/jetty/5.1.10/jetty-5.1.10.jar" sourcepath="M2_REPO/jetty/jetty/5.1.10/jetty-5.1.10-sources.jar" javadocpath="M2_REPO/jetty/jetty/5.1.10/jetty-5.1.10-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/ant/ant/1.7.1/ant-1.7.1.jar" sourcepath="M2_REPO/org/apache/ant/ant/1.7.1/ant-1.7.1-sources.jar" javadocpath="M2_REPO/org/apache/ant/ant/1.7.1/ant-1.7.1-javadoc.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/servlet/servlet-api/2.4/servlet-api-2.4.jar" sourcepath="M2_REPO/javax/servlet/servlet-api/2.4/servlet-api-2.4-sources.jar" javadocpath="M2_REPO/javax/servlet/servlet-api/2.4/servlet-api-2.4-javadoc.jar"/>
   <classpathentry kind="var" path="M2_REPO/junit/junit/4.6/junit-4.6.jar" sourcepath="M2_REPO/junit/junit/4.6/junit-4.6-sources.jar" javadocpath="M2_REPO/junit/junit/4.6/junit-4.6-javadoc.jar"/>
   <classpathentry kind="var" path="M2_REPO/oqube/muse/muse-parser/1.0-rc3/muse-parser-1.0-rc3.jar" sourcepath="M2_REPO/oqube/muse/muse-parser/1.0-rc3/muse-parser-1.0-rc3-sources.jar" javadocpath="M2_REPO/oqube/muse/muse-parser/1.0-rc3/muse-parser-1.0-rc3-javadoc.jar"/>
   <classpathentry kind="var" path="M2_REPO/fr/lifl/parsing/1.0.1/parsing-1.0.1.jar" sourcepath="M2_REPO/fr/lifl/parsing/1.0.1/parsing-1.0.1-sources.jar" javadocpath="M2_REPO/fr/lifl/parsing/1.0.1/parsing-1.0.1-javadoc.jar"/>

@@ -23,21 +23,32 @@ public class RowColExtractor {
             BufferedReader bufferedReader = new BufferedReader(text);
             String tmp = null;
             while ((tmp = bufferedReader.readLine()) != null) {
+            	tmp = tmp.replace("\t", "    ");
                 if (row >= beginLine) {
-                    if (row == beginLine) {
-                        result += tmp.substring(beginColumnInclusive - 1) + NewLine.STR;
-                    }
-                    if (beginLine == endLine) {
-                        result = result.substring(0, endColumnExclusive - beginColumnInclusive);
-                        break;
-                    }
-                    if (row > beginLine && row < endLine) {
-                        result += tmp + NewLine.STR;
-                    }
-                    if (row == endLine) {
-                        result += tmp.substring(0, endColumnExclusive - 1);
-                        break;
-                    }
+                	try {
+						if (row == beginLine) {
+							int start = beginColumnInclusive-1;
+							result += tmp.substring(start) + NewLine.STR;
+						}
+						if (beginLine == endLine) {
+						    result = result.substring(0, endColumnExclusive - beginColumnInclusive);
+						    break;
+						}
+						if (row > beginLine && row < endLine) {
+						    result += tmp + NewLine.STR;
+						}
+						if (row == endLine) {
+						    result += tmp.substring(0, endColumnExclusive - 1);
+						    break;
+						}
+					} catch (Exception e) {
+                		System.err.println("res:"+ result + 
+                							"\nline:" + tmp + 
+                							"\ncoordinates:" + beginLine + "," + 
+	                							endLine + "," + 
+	                							beginColumnInclusive + "," + endColumnExclusive);
+                		e.printStackTrace();
+					}
                 }
                 row++;
             }

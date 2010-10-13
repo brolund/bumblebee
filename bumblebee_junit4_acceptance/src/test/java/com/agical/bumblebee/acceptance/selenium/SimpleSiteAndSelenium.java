@@ -27,7 +27,7 @@ public class SimpleSiteAndSelenium {
     public static void startSelenium() throws Exception {
         seleniumServer = new SeleniumServer();
         seleniumServer.start();
-        selenium = new DefaultSelenium("localhost", seleniumServer.getPort(), "*googlechrome", "http://localhost:8080");
+        selenium = new DefaultSelenium("localhost", seleniumServer.getPort(), "*firefox", "http://localhost:8080");
         selenium.start();
     }
 

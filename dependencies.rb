@@ -60,7 +60,9 @@ SELENIUM_2_0 = [
     'org.seleniumhq.selenium:selenium-server:jar:2.0a5']
 
 SELENIUM = SELENIUM_2_0
-JETTY = ['jetty:jetty:jar:5.1.10']
+JETTY = ['jetty:jetty:jar:5.1.10',
+		'org.apache.ant:ant:jar:1.7.1',
+		'javax.servlet:servlet-api:jar:2.4']
     
 BUMBLEBEE = ['com.agical.bumblebee:bumblebee:jar:' + BUMBLEBEE_VERSION]
 BUMBLEBEE_JUNIT4 = ['com.agical.bumblebee:bumblebee_junit4:jar:' + BUMBLEBEE_VERSION]

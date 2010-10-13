@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd";>
+<html>
+<head>
+	<title>Untitled</title>
+	<meta name="generator" content="BBEdit 7.1.1">
+
+<script language="javascript">
+document.oldmm = document.onclick;
+document.onclick=function myMove(e) {
+	document.cropping = (e.screenX-e.clientX) + ',' + (e.screenY-e.clientY);
+	document.getElementById('report').innerHTML = document.cropping;
+}
+//document.onmousemove = document.oldmm;
+
+
+</script>
+
+</head>
+<body onload="">
+<div id="report">Hej</div>
+<div id="second">Hej</div>
+</body>
+</html>

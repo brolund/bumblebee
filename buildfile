@@ -109,6 +109,7 @@ define 'com.agical.bumblebee' do
       test.include 'com.agical.bumblebee.acceptance.AllTest'
       compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY, BUMBLEBEE_UML,BUMBLEBEE_SWING, BUMBLEBEE_SELENIUM,
                   JUNIT, MUSE, MUSE_PARSER, JRUBY,PMD,UMLSPEED,BATIK,SELENIUM
+      test.with JETTY
       core_no_junit = package(:jar, :id=>'bumblebee-core-no-junit')
  
       compile.classpath.each {|c| core_no_junit.merge(c).

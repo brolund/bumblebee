@@ -13,7 +13,9 @@ import com.sun.org.apache.regexp.internal.RE;
 
 public abstract class TestSourceExtractor {
     private static final Class<SomeClass> SOME_CLASS = SomeClass.class;
+    private static final Class<SomeClassWithTabs> SOME_CLASS_WITH_TABS = SomeClassWithTabs.class;
     private static final String SOME_CLASS_NAME = SOME_CLASS.getName();
+    private static final String SOME_CLASS_NAME_WITH_TABS = SOME_CLASS_WITH_TABS.getName();
     private SourceExtractorInterface extractor;
     
     protected abstract SourceExtractorInterface getSourceExtractor(String src, String test, String helpers);
@@ -116,6 +118,11 @@ public abstract class TestSourceExtractor {
     public void getClassComment() throws Exception {
         assertEquals("Class comment" + NewLine.STR + NewLine.STR + "    indented part" + NewLine.STR, extractor
                 .getClassComment(SOME_CLASS_NAME));
+    }
+    @Test
+    public void getClassCommentWithTabs() throws Exception {
+        assertEquals("Class comment" + NewLine.STR + NewLine.STR + "    indented part" + NewLine.STR, extractor
+                .getClassComment(SOME_CLASS_NAME_WITH_TABS));
     }
     @Test
     public void getNonExistingClassCommentReturnsEmptyStringEvenWithMethodComments() throws Exception {
