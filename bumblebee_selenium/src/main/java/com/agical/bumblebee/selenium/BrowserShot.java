@@ -65,28 +65,10 @@ public class BrowserShot extends Shot {
         String windowId = selenium.getEval("'' + window.location;");
         NavigationSpace navigationSpace = windowIdToNavigationSpace.get(windowId);
         if(navigationSpace==null) {
-
-        	String beforeClick = 
-	    		//"document.oldclick = document.onclick;" + 
-	        	"document.onmousemove=function myClick(e) {" + 
-	        		"document.cropping = (e.screenX-e.clientX) + ',' + (e.screenY-e.clientY);document.body+=document.cropping;" + 
-	        	"}";
-
-        	selenium.getEval(beforeClick);
-        	
-        	selenium.mouseMoveAt("//body/*", "10,10");
-
-        	String afterClick = 
-        		//"document.onclick = document.oldclick;" + 
-        		"document.cropping;";
-        	String navigationAndFooterHeights = selenium.getEval(afterClick);
-        	
-//            String navigationAndFooterHeights = selenium
-//                    .getEval("win = window.open('url', 'windowname', 'height=200,width=200,status=0,toolbar=0,menubar=0,resizable=0,scrollbars=0'); \r\n"
-//                            + "bottomBarHeight = win.outerHeight-win.innerHeight;\r\n"
-//                            + "topNavigationHeight = window.outerHeight-window.innerHeight-bottomBarHeight;\r\n"
-//                            + "win.close();\r\n" + "topNavigationHeight+','+bottomBarHeight;\r\n" + "");
-            String[] spaces = navigationAndFooterHeights.split(",");
+        	String documentCoordinatesScript = 
+        		"(window.mozInnerScreenY-window.screenY)+ ',' + 0;";
+        	String documentPageCoordinates = selenium.getEval(documentCoordinatesScript);
+            String[] spaces = documentPageCoordinates.split(",");
             navigationSpace = new NavigationSpace(Integer.parseInt(spaces[0]), Integer.parseInt(spaces[1]));
             windowIdToNavigationSpace.put(windowId, navigationSpace);
             System.out.println("Added: " + windowId);

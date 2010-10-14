@@ -6,7 +6,6 @@ import org.junit.Test;
 import com.agical.bumblebee.selenium.Picter;
 
 
-@Ignore
 public class DetailingTheScreenShots extends SimpleSiteAndSelenium {
     /*!!
     Bumblebee also allow you to put more detailed descriptions in your snapshots.  

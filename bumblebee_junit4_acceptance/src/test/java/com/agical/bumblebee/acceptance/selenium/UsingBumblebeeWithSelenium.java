@@ -2,7 +2,7 @@ package com.agical.bumblebee.acceptance.selenium;
 
 import org.junit.runners.Suite.SuiteClasses;
 
-@SuiteClasses({IncludingScreenshotsInTheDocumentation.class /*, DetailingTheScreenShots.class*/})
+@SuiteClasses({IncludingScreenshotsInTheDocumentation.class, DetailingTheScreenShots.class})
 public class UsingBumblebeeWithSelenium {
 	/*!!
 	This is a tutorial on how to use Bumblebee together with 

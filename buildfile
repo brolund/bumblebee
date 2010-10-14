@@ -43,6 +43,8 @@ define 'com.agical.bumblebee' do
 	    project.eclipse.name = 'bumblebee'
         compile.with MUSE, MUSE_PARSER, JUNIT,PMD
         test.include 'com.agical.bumblebee.TestAll'
+        test.resources.from _('src/test/resources')
+        
         package :jar, :id => 'bumblebee'
         package :sources, :id => 'bumblebee'
         package :javadoc, :id => 'bumblebee'
@@ -55,6 +57,7 @@ define 'com.agical.bumblebee' do
 	    project.eclipse.name = 'bumblebee_jruby'
         compile.with BUMBLEBEE, JRUBY, JUNIT
         test.include 'com.agical.bumblebee.jruby.TestAll'
+	    resources.from _('src/main/resources')
         package :jar, :id => 'bumblebee_jruby'
         package :sources, :id => 'bumblebee_jruby'
         package :javadoc, :id => 'bumblebee_jruby'
@@ -75,6 +78,8 @@ define 'com.agical.bumblebee' do
 	    project.eclipse.name = 'bumblebee_uml'
         compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY,
                   JUNIT, MUSE, MUSE_PARSER, JRUBY, PMD, BATIK, UMLSPEED
+	    resources.from _('src/main/resources')
+	    test.with _('src/test/resources')
         test.include 'com.agical.bumblebee.uml.TestAll'
         package :jar, :id => 'bumblebee_uml'
         package :sources, :id => 'bumblebee_uml'
@@ -109,7 +114,9 @@ define 'com.agical.bumblebee' do
       test.include 'com.agical.bumblebee.acceptance.AllTest'
       compile.with BUMBLEBEE, BUMBLEBEE_JUNIT4, BUMBLEBEE_JRUBY, BUMBLEBEE_UML,BUMBLEBEE_SWING, BUMBLEBEE_SELENIUM,
                   JUNIT, MUSE, MUSE_PARSER, JRUBY,PMD,UMLSPEED,BATIK,SELENIUM
-      test.with JETTY
+      test.with JETTY, _('src/test/resources')
+
+      
       core_no_junit = package(:jar, :id=>'bumblebee-core-no-junit')
  
       compile.classpath.each {|c| core_no_junit.merge(c).

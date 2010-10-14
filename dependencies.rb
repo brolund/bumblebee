@@ -26,7 +26,7 @@ BATIK = [
     'xerces:xercesImpl:jar:2.5.0',
     'xml-apis:xmlParserAPIs:jar:2.0.2']
 PMD = [
-    'pmd:pmd:jar:4.2.4',
+    'pmd:pmd:jar:4.2.5',
     'jaxen:jaxen:jar:1.1.1',
     'asm:asm:jar:3.1']
 JUNIT_4_4  = ['junit:junit:jar:4.4']
